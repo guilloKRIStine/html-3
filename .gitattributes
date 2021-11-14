@@ -1,2 +1,34 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+<head>
+    <script type="text/javascript">
+	t=0;
+		function right()
+		{
+			str=document.getElementById("i_text1").value;
+			for(i=0; i<str.length; i++){
+				if(str.charAt(i)!=" "){
+				t=i;
+				}
+			}
+			for(j=0; j<t+1; j++){
+				document.getElementById("i_text2").value=document.getElementById("i_text2").value+str.charAt(j);
+			}
+		}
+	</script>
+</head>
+<body>
+<table>
+<tr>
+<td>
+	<input type="text" id="i_text1">
+	<input type="text" id="i_text2">
+</td>
+</tr>
+<tr>
+	<td>
+	<input type="button" value="Go" onclick="right()">
+	</td>
+</tr>
+</table>
+</body>
